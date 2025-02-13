@@ -1,1 +1,20 @@
-
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+          steps {
+                   git branch: 'main', url:'https://github.com/manratho1/my-first-git-repo.git'
+                }
+                          }
+        stage('Build') {
+          steps {
+                  './build.sh'
+                }
+                       }
+       stage('Test') {
+         steps {
+                  './run_tests.sh'
+               }
+                    }
+           }
+         }
