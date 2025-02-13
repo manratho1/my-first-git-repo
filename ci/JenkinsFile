@@ -3,20 +3,17 @@ pipeline {
     stages {
         stage('Checkout') {
           steps {
-              git branch: 'main', url:
-'https://github.com/username/repo.git'
+                   git branch: 'main', url:'https://github.com/manratho1/my-first-git-repo.git'
                 }
                           }
         stage('Build') {
           steps {
-                  // Add build steps here, for example:
-                sh './build.sh'
+                  './build.sh'
                 }
                        }
        stage('Test') {
          steps {
-                 // Add test steps here
-sh './run_tests.sh'
+                  './run_tests.sh'
                }
                     }
            }
