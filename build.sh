@@ -1,2 +1,2 @@
 echo "Hello this is my first Jenkin's pipeline"
-python count_vowels.py
+python3 count_vowels.py
